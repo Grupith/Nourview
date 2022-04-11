@@ -3,6 +3,11 @@ import { Link } from 'react-router-dom';
 import { MdEditOff } from 'react-icons/md';
 
 export default function Login() {
+
+  const handleSubmit = (e) => {
+        e.preventDefault();
+    }
+
   return (
     <div className='FormContainer'>
       <div className='HomeIconWrapper'>
@@ -11,7 +16,7 @@ export default function Login() {
           </Link>
       </div>
       <h2>Login</h2>
-        <form className='SignupForm'>
+        <form onSubmit={handleSubmit} className='SignupForm'>
             <label className='LabelInput'>
                 Email
                 <input type='text' name='email' />
