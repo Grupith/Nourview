@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Josefin Sans', sans-serif;
+  background-image: linear-gradient(to right, #36D1DC, #5B86E5);
+}
+.App {
+  text-align: center;
+  color: white;
+}
+
+/* Homepage Styles */
+
+.Title {
+  font-size: 4rem;
+  font-weight: 700;
+  margin-top: 10rem;
+  color: white;
+  animation: fadeIn ease 3s;
+}
+
+h2 {
+  font-weight: 500;
+  margin-top: 1.5rem;
+  animation: fadeIn ease 3s;
+}
+
+.ButtonWrapper {
+  display: flex;
+  text-align: center;
+  justify-content: space-evenly;
+  align-items: center;
+  font-size: 1.5rem;
+  width: 15rem;
+  margin: 4rem auto;
+  animation: fadeIn ease 3s;
+}
+
+.Button {
+  cursor: pointer;
+  font-weight: 200;
+  transition: all 0.2s ease-in-out;
+  text-decoration: none;
+  color: white;
+}
+
+.Button:hover {
+  transform: scale(1.1);
+}
+
+.Med-Button {
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  border-radius: 5px;
+  padding: 0.5rem 1.5rem;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  font-weight: 300;
+  text-decoration: none;
+  color: white;
+}
+
+.Med-Button:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Signup/Login Styles */
+
+.FormContainer {
+  border: 1px solid #F5F7F8;
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  margin: 6rem auto;
+  padding: 1rem;
+  border-radius: 1rem;
+  background-color: white;
+  color: black;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.FormContainer h2 {
+  font-size: 2.5rem;
+}
+
+.SignupForm {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  font-size: 1.3rem;
+  font-weight: 300;
+}
+
+.LabelInput {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 1rem;
+}
+
+.LabelInput input {
+  font-size: 1.3rem;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: #F5F7F8;
+  outline: none;
+  margin-top: 5px;
+}
+
+.LabelInput input:focus {
+  border: 1px solid #0076c5ba;
+}
+
+.SignupButton {
+  font-size: 1.3rem;
+  margin: 1rem auto;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  width: 90%;
+  background-color: #0076c5ba;
+  color: white;
+  cursor: pointer;
+  transition: all ease 500ms;
+}
+
+.SignupButton:hover {
+  background-color: #0076c5ef;
+}
+
+.SignupContainer p {
+  font-weight: 200;
+}
+
+.HomeIcon {
+  font-size: 1.7rem;
+  cursor: pointer;
+}
+
+.HomeIcon:hover {
+  color:#5B86E5;
+}
+
+.HomeIconWrapper {
+  display: flex;
+  justify-content: flex-end;
+}
+
+
+@keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
