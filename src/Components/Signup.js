@@ -1,11 +1,33 @@
-import React from 'react'
-import { Link } from 'react-router-dom';
+import React, { useState } from 'react'
+import { Link, useNavigate } from 'react-router-dom';
 import { MdEditOff } from 'react-icons/md';
+import { useAuth } from '../Contexts/AuthContext';
 
 export default function Signup() {
-
-    const handleSubmit = (e) => {
+    const [email, setEmail] = useState();
+    const [password, setPassword] = useState();
+    const [confirmPassword, setConfirmPassword] = useState();
+    const [error, setError] = useState('');
+    const [loading, setLoading] = useState(false);
+    const { signup } = useAuth();
+    const navigate = useNavigate();
+  
+    const handleSubmit = async (e) => {
         e.preventDefault();
+
+        if (password !== confirmPassword) {
+            return setError('Passwords do not match')
+        }
+
+        try {
+            setError('')
+            setLoading(true)
+            await signup(email, password)
+            navigate('/Dashboard')
+        } catch {
+            setError('Failed to create an account')
+        }
+        setLoading(false)
     }
 
   return (
@@ -19,20 +41,20 @@ export default function Signup() {
         <form onSubmit={handleSubmit} className='SignupForm'>
             <label className='LabelInput'>
                 Email
-                <input type='text' name='email' />
+                <input type='text' name='email' onChange={(e) => setEmail(e.target.value)} />
             </label>
             <label className='LabelInput'>
                 Password
-                <input type='password' name='password' />
+                <input type='password' name='password' onChange={(e) => setPassword(e.target.value)} />
             </label>
             <label className='LabelInput'>
                 Confirm Password
-                <input type='password' name='confirmPassword' />
+                <input type='password' name='confirmPassword' onChange={(e) => setConfirmPassword(e.target.value)}/>
             </label>
-            { /* <div className='ErrorWrapper'>
-                <div className='PasswordConfirmationWarning'>Passwords do not match!</div>
-  </div> */}
-            <button type='submit' className='SignupButton'>Create Account</button>
+          <div className='ErrorWrapper'>
+                <div className='PasswordConfirmationWarning'>{error}</div>
+          </div>
+            <button type='submit' className='SignupButton' disabled={loading}>Create Account</button>
             <p style={{marginTop: '1rem'}}>Already have an account? <Link to='/Login' style={{textDecoration: 'none', color: '#0077C5', fontWeight: 300 }}>Login</Link></p>
         </form>
     </div>

@@ -8,11 +8,17 @@
 
 html {
   font-family: 'Josefin Sans', sans-serif;
-  background-image: linear-gradient(to right, #36D1DC, #5B86E5);
+ background-image: linear-gradient(to right, #36D1DC, #5B86E5);
 }
 .App {
   text-align: center;
   color: white;
+}
+
+.Logo {
+  height: 2rem;
+  max-height: 2rem;
+  margin: 1rem;
 }
 
 /* Homepage Styles */
@@ -21,6 +27,7 @@ html {
   margin-top: 2rem;
   font-size: 1.5rem;
   font-weight: 200;
+  animation: fadeIn ease 3s;
 }
 .Title {
   font-size: 4rem;
@@ -186,6 +193,10 @@ html {
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
+.LogoWrapper {
+  display: flex;
+  justify-content: flex-start;
+}
 @keyframes fadeIn {
   0% {
     opacity:0;
