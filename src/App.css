@@ -7,41 +7,48 @@
 }
 
 html {
-  font-family: 'Josefin Sans', sans-serif;
- background-image: linear-gradient(to right, #36D1DC, #5B86E5);
+  font-family: 'Ubuntu', sans-serif;
+  background-color: #F5F7F8;
 }
 .App {
   text-align: center;
-  color: white;
+  color: black;
 }
 
 .Logo {
-  height: 2rem;
-  max-height: 2rem;
-  margin: 1rem;
+  height: 4rem;
+  max-height: 4rem;
+  margin-top: 10rem;
+  animation: fadeIn ease 3s;
 }
 
 /* Homepage Styles */
 
+.Home {
+  background-size: cover;
+}
+
 .Home h3 {
   margin-top: 2rem;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   font-weight: 200;
+  animation: fadeIn ease-in-out 1s;
+}
+
+.Home h2 {
+  font-weight: 400;
+  margin-top: 1.7rem;
   animation: fadeIn ease 3s;
 }
+
 .Title {
   font-size: 4rem;
   font-weight: 700;
   margin-top: 10rem;
-  color: white;
+  color: black;
   animation: fadeIn ease 3s;
 }
 
-.Home h2 {
-  font-weight: 500;
-  margin-top: 1.7rem;
-  animation: fadeIn ease 3s;
-}
 
 .ButtonWrapper {
   display: flex;
@@ -52,6 +59,7 @@ html {
   width: 15rem;
   margin: 3rem auto;
   animation: fadeIn ease 3s;
+  color: black;
 }
 
 .Button {
@@ -59,7 +67,7 @@ html {
   font-weight: 200;
   transition: all 0.2s ease-in-out;
   text-decoration: none;
-  color: white;
+  color: black;
 }
 
 .Button:hover {
@@ -67,14 +75,14 @@ html {
 }
 
 .Med-Button {
-  border: 1px solid rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(0, 0, 0, 0.8);
   border-radius: 5px;
   padding: 0.5rem 1.5rem;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
   font-weight: 300;
   text-decoration: none;
-  color: white;
+  color: black;
 }
 
 .Med-Button:hover {
@@ -94,6 +102,7 @@ html {
   background-color: white;
   color: black;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  animation: fadeIn ease-in-out 1s;
 }
 
 .FormContainer h2 {
@@ -166,15 +175,18 @@ html {
   justify-content: flex-end;
 }
 
+/* Signup/Login Error */
+
 .ErrorWrapper {
   display:flex;
   justify-content: center;
   align-items: center;
   margin:auto;
 }
-.PasswordConfirmationWarning {
+
+.ErrorStatus {
   font-size: 1.3rem;
-  padding: 10px;
+  padding:  5px 11px;
   border-radius: 10px;
   background-color: #e64b40da;
   color: white;
@@ -197,6 +209,95 @@ html {
   display: flex;
   justify-content: flex-start;
 }
+
+/* Dashboard View */
+
+.Dashboard {
+  display: flex;
+  flex-direction: row;
+}
+
+/* Sidebar */
+
+.Sidebar {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #343A40;
+  height: 100vh;
+  width: 18rem;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.Sidebar h1 {
+  margin: 1rem auto;
+  color: white;
+  font-weight: 500;
+  width: 50%;
+}
+
+.Sidebar h2 {
+  margin-top: 1rem;
+  color: white;
+  font-weight: 500;
+  font-size: 1.3rem;
+}
+
+.SidebarButtonContainer {
+  margin-top: 2rem;
+}
+
+.SidebarButton {
+  font-size: 1.3rem;
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  width: 60%;
+  margin: 1.7rem auto;
+  padding: 7px 10px;
+  list-style-type: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.SidebarButton:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  transition: all 0.1s ease-in-out;
+  box-shadow: rgba(242, 239, 239, 0.09) 0px 7px 29px 0px;
+}
+
+.SidebarFooterWrapper {
+  display: flex;
+  justify-content: center;
+  margin: 1rem;
+}
+.SidebarFooter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 85%;
+}
+
+.BarsIcon {
+  color: white;
+  cursor: pointer;
+}
+
+.LogoutButton {
+  font-size: 1.3rem;
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  border-radius: 5px;
+  padding: 7px 3rem;
+  cursor: pointer;
+}
+
+.LogoutButton:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  transition: all 0.1s ease-in-out;
+  box-shadow: rgba(242, 239, 239, 0.09) 0px 7px 29px 0px;
+}
+
+
 @keyframes fadeIn {
   0% {
     opacity:0;

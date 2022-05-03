@@ -41,19 +41,17 @@ export default function Signup() {
         <form onSubmit={handleSubmit} className='SignupForm'>
             <label className='LabelInput'>
                 Email
-                <input type='text' name='email' onChange={(e) => setEmail(e.target.value)} />
+                <input required type='email' name='email' onChange={(e) => setEmail(e.target.value)} />
             </label>
             <label className='LabelInput'>
                 Password
-                <input type='password' name='password' onChange={(e) => setPassword(e.target.value)} />
+                <input required type='password' name='password' onChange={(e) => setPassword(e.target.value)} />
             </label>
             <label className='LabelInput'>
                 Confirm Password
-                <input type='password' name='confirmPassword' onChange={(e) => setConfirmPassword(e.target.value)}/>
+                <input required type='password' name='confirmPassword' onChange={(e) => setConfirmPassword(e.target.value)}/>
             </label>
-          <div className='ErrorWrapper'>
-                <div className='PasswordConfirmationWarning'>{error}</div>
-          </div>
+            {error && <div className='ErrorWrapper'><div className='ErrorStatus'>{error}</div></div>}
             <button type='submit' className='SignupButton' disabled={loading}>Create Account</button>
             <p style={{marginTop: '1rem'}}>Already have an account? <Link to='/Login' style={{textDecoration: 'none', color: '#0077C5', fontWeight: 300 }}>Login</Link></p>
         </form>

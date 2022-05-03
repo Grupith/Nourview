@@ -8,6 +8,11 @@ import Dashboard from './Components/Dashboard';
 import { AuthProvider } from './Contexts/AuthContext';
 import PrivateRoute from './Components/PrivateRoute';
 
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { faBars } from '@fortawesome/free-solid-svg-icons'
+
+library.add(faBars)
+
 function App() {
   return (
     <AuthProvider>
