@@ -25,6 +25,7 @@ html {
 
 .Home {
   background-size: cover;
+  text-align: center;
 }
 
 .Home h3 {
@@ -102,6 +103,7 @@ html {
   color: black;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   animation: fadeIn ease-in-out 1s;
+  text-align: center;
 }
 
 .FormContainer h2 {
