@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom';
-import { MdEditOff } from 'react-icons/md';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { useAuth } from '../Contexts/AuthContext';
 
 export default function Login() {
@@ -30,7 +30,7 @@ export default function Login() {
     <div className='FormContainer'>
       <div className='HomeIconWrapper'>
         <Link to='/'>
-              <MdEditOff className='HomeIcon'/>
+          <FontAwesomeIcon icon="fa-solid fa-xmark" size='2x' className='HomeIcon'/>
           </Link>
       </div>
       <h2>Login</h2>

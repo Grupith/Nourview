@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { useAuth } from '../Contexts/AuthContext';
 import { useNavigate } from 'react-router-dom';
 
-export default function Sidebar() {
+export default function Sidebar({ setShowDashboard, setShowEmployeesPage, setShowMessagesPage }) {
 
   const { logout } = useAuth()
   const [error, setError] = useState()
@@ -23,12 +23,26 @@ export default function Sidebar() {
   return (
     <div className='Sidebar'>
       <div className='SidebarMain'>
-        <h1>Nourview</h1>
+        <div className='SidebarTitleWrapper'>
+          <img src='/images/WhiteNourLogo.png' className='SidebarTitleLogo'/>
+          <h1>Nourview</h1>
+        </div>
         <h2>Company Name</h2>
         <ul className='SidebarButtonContainer'>
-          <li className='SidebarButton'>Dashboard</li>
-          <li className='SidebarButton'>Employees</li>
-          <li className='SidebarButton'>Messages</li>
+          <li className='SidebarButton' onClick={() => {
+            setShowDashboard(true)
+            setShowEmployeesPage(false)
+            setShowMessagesPage(false)
+            }}>Dashboard</li>
+          <li className='SidebarButton' onClick={() => {
+            setShowEmployeesPage(true)
+            setShowDashboard(false)
+            setShowMessagesPage(false)
+            }}>Employees</li>
+          <li className='SidebarButton' onClick={() => { 
+            setShowMessagesPage(true)
+            setShowDashboard(false)
+            setShowEmployeesPage(false)}}>Messages</li>
           <br />
           <li className='SidebarButton'>Create Board</li>
         </ul>

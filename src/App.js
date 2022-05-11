@@ -9,9 +9,9 @@ import { AuthProvider } from './Contexts/AuthContext';
 import PrivateRoute from './Components/PrivateRoute';
 
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { faBars } from '@fortawesome/free-solid-svg-icons'
+import { faBars, faXmark } from '@fortawesome/free-solid-svg-icons'
 
-library.add(faBars)
+library.add(faBars, faXmark)
 
 function App() {
   return (
