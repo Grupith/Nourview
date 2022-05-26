@@ -226,7 +226,7 @@ html {
   justify-content: space-between;
   background-color: #343A40;
   height: 100vh;
-  width: 20rem;
+  width: 18rem;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 
@@ -321,6 +321,57 @@ html {
 
 .MessagesPage {
   margin: 2rem;
+}
+
+/* CreateCall */
+
+.CreateCall {
+  margin-top: 2rem;
+  border: 1px solid black;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 50rem;
+  padding: 1rem;
+}
+
+.ContentContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.ContentContainer h3 {
+  border-bottom: 1px solid black;
+}
+
+.ContentContainer span {
+  margin-top: 10px;
+}
+
+.ContentContainer input {
+  width: 75%;
+  margin-top: 10px;
+  font-size: 1rem;
+  padding: 5px;
+  text-align: center;
+  border-radius: 8px;
+  border: 1px solid black;
+}
+
+/* Call */
+
+.Call {
+  margin-top: 2rem;
+  border: 1px solid black;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 50rem;
+  padding: 1rem;
 }
 
 @keyframes fadeIn {

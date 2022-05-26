@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import Sidebar from './Sidebar';
+import CreateCall from './CreateCall';
+import Call from './Call';
 
 export default function Dashboard() {
 
@@ -16,6 +18,8 @@ export default function Dashboard() {
                setShowMessagesPage={setShowMessagesPage} />
       {showDashboard ? <div className='Main'>
         <h1>Dashboard View</h1>
+        <CreateCall />
+        <Call />
         </div> : <div></div> }
       {showEmployeesPage ? <div className='EmployeesPage'>
         <h1>Employees Page</h1>
